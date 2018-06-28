@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+<link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<script data-require="bootstrap@*" data-semver="3.3.5" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
+<script data-require="angular-route@*" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-route.js"></script>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>
+</head>
+
+<body id="body" class="container">
+	<br />
+	<ul class="nav nav-tabs">
+		<li data-toggle="tab"><a href="#/home">Home</a></li>
+		<li><a href="#/restaurants" data-toggle="tab">Restaurants</a></li>
+		<li><a href="#/items" data-toggle="tab">Items</a></li>
+	</ul>
+
+	<div id="centered" ng-view></div>
+
+</body>
+
+</html>

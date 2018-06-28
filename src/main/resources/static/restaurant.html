@@ -1,0 +1,68 @@
+<div class="well">
+	<form novalidate>
+		<table cellpadding="100">
+			<tr>
+				<td>Name</td>
+				<td><input type="text" ng-model="restaurant.name"></td>
+			</tr>
+
+			<tr>
+				<td>Description</td>
+				<td><input type="text" ng-model="restaurant.description"></td>
+			</tr>
+
+			<tr>
+				<td>Contact</td>
+				<td><input type="text" ng-model="restaurant.contact"></td>
+			</tr>
+
+			<tr>
+				<td>Website</td>
+				<td><input type="text" ng-model="restaurant.website"></td>
+			</tr>
+
+			<tr>
+				<td>City</td>
+				<td><input type="text" ng-model="restaurant.city"></td>
+			</tr>
+
+			<tr>
+				<td>Address</td>
+				<td><input type="text" ng-model="restaurant.address"></td>
+			</tr>
+
+			<tr>
+				<td><button ng-click="saveRestaurant()">Save Restauant</button></td>
+			</tr>
+		</table>
+
+	<p>newRestaurant = {{restaurant}}</p>
+
+	<div class="clearfix"></div>
+	<table class="table table-strip table-hover" data-ng-init="fetchRestaurant()">
+
+		<tr style="background-color: #8FBC8F">
+			<td><b>Name</b></td>
+			<td><b>Description</b></td>
+			<td><b>Contact</b></td>
+			<td><b>Website</b></td>
+			<td><b>Like Count</b></td>
+			<td><b>City</b></td>
+			<td><b>Address</b></td>
+		</tr>
+		<tr ng-repeat="restaurant in restaurants">
+			<td>{{restaurant.name}}</td>
+			<td>{{restaurant.description}}</td>
+			<td>{{restaurant.contact}}</td>
+			<td>{{restaurant.website}}</td>
+			<td>{{restaurant.likeCount}}</td>
+			<td>{{restaurant.city}}</td>
+			<td>{{restaurant.address}}</td>
+		</tr>
+	</table>
+
+</div>
+
+
+
+

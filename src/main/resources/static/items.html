@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+	<div class="panel-heading" align="center">ItemList List</div>
+	<div class="panel-body" data-ng-init="fetch()">
+		<select id="RestaurantSelector" data-ng-init="fetchRestaurant()">
+			<option ng-repeat="restaurant in restaurants" value="{{restaurant.id}}">{{restaurant.name}}</option>
+		</select>
+
+		<table class="table table-strip table-hover" data-ng-init="fetchItems()">
+
+			<tr style="background-color: #8FBC8F">
+				<td><b>Name</b></td>
+				<td><b>Description</b></td>
+				<td><b>Price</b></td>
+			</tr>
+			<tr ng-repeat="item in items">
+				<td>{{item.name}}</td>
+				<td>{{item.description}}</td>
+				<td>{{item.price}}</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
